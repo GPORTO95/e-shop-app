@@ -1,0 +1,28 @@
+<div class="div__list">
+    @for (product of products$ | async; track product) {
+    <div class="div__card">
+        <div class="div__card_image">
+            <figure>
+                @if (product.status === 'sale') {
+                <div class="div__card_image_sale">
+                    <span>Sale</span>
+                </div>
+                }
+                <img src="images/{{product.image}}.jpg" alt="{{product.name}}" height="245px">
+            </figure>
+        </div>
+        <hr>
+        <div class="div__card_details">
+            <div>
+                <p>{{ product.name }}</p>
+                <p>{{ product.description }}</p>
+            </div>
+            @if (product.discounted === 'discounted') {
+            <span>$ {{ product.discount }}</span>
+            }
+            <span>$ {{ product.price }}</span>
+            <button class="btn__add_product">+ cart</button>
+        </div>
+    </div>
+    }
+</div>

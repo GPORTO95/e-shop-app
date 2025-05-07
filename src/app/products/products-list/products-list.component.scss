@@ -1,0 +1,57 @@
+.div__list {
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap; //quebra de linha
+    gap: 5rem;
+    padding: 10rem;
+
+    .div__card_image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .div__card_image_sale {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: green;
+            padding: .5rem 2rem;
+            border-bottom-right-radius: 1rem;
+
+            span {
+                color: white;
+            }
+        }
+    }
+
+    hr {
+        width: 90%;
+        margin: auto;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    .div__card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        width: 30rem;
+
+        .div__card_details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+
+            .btn__add_product {
+                background: transparent;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+            }
+        }
+    }
+}
