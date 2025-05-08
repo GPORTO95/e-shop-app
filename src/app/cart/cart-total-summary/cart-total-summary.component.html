@@ -1,0 +1,16 @@
+<p>CART TOTAL</p>
+<div class="details">
+    <div class="items">
+        <p>Substotal Price</p>
+        <p>{{ cartService.cartSubtotal() }}</p>
+    </div>
+    <div class="items">
+        <p>Tax</p>
+        <p>{{ cartService.cartTax() }}</p>
+    </div>
+    <div class="items">
+        <p>TOTAL</p>
+        <p>{{ cartService.cartTotal() }}</p>
+    </div>
+</div>
+<button class="btn btn-primary">Checkout</button>

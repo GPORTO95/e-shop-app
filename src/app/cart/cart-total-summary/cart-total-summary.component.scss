@@ -1,0 +1,22 @@
+:host {
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 3rem;
+    min-width: 50rem;
+
+    p {
+        margin-bottom: 1rem;
+    }
+    
+    .details {
+        display: flex;
+        flex-direction: column;
+        row-gap: .4rem;
+        
+        .items {
+            display: flex;
+            justify-content: space-between;
+            gap: 10rem;
+        }
+    }
+}
