@@ -1,0 +1,8 @@
+<p class="logo">Coffe Shop</p>
+<div class="menu">
+    @if (cartCount(); as count) {
+    <div class="menu_items">
+        <p class="count">{{ count > 0 ? count : '' }}</p>
+    </div>
+    }
+</div>
