@@ -21,7 +21,7 @@
             <span>$ {{ product.discount }}</span>
             }
             <span>$ {{ product.price }}</span>
-            <button class="btn__add_product">+ cart</button>
+            <button (click)="addProductToCart(product)" class="btn__add_product">+ cart</button>
         </div>
     </div>
     }

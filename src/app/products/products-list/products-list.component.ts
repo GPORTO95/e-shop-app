@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../products.service';
 import { AsyncPipe } from '@angular/common';
+import { CartService } from '../../cart/cart.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-products-list',
@@ -11,5 +13,10 @@ import { AsyncPipe } from '@angular/common';
 export class ProductsListComponent {
   
   private service = inject(ProductService);
+  private cartService = inject(CartService);
   products$ = this.service.load();
+
+  addProductToCart(product: Product): void {
+    this.cartService.addProduct(product);
+  }
 }
