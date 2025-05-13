@@ -1,1 +1,21 @@
-<p>cart-list works!</p>
+<h1>CART ITEMS</h1>
+<div class="list">
+    @for (cartItem of cartItems(); track cartItem) {
+    <div class="product">
+        <div class="item">
+            <img src="images/{{ cartItem.product.image }}.jpg" height="100px" alt="{{ cartItem.product.name }}" />
+            <div class="item_name">
+                <h5>{{ cartItem.product.name }}</h5>
+                <p>{{ cartItem.product.description }}</p>
+            </div>
+        </div>
+        <div class="item_price">
+            <h5>${{ cartItem.product.price * cartItem.quantity }}</h5>
+            <p>${{ cartItem.product.price }} each</p>
+        </div>
+        <button class="remove" (click)="onRemove(cartItem)">
+            Remove
+        </button>
+    </div>
+    }
+</div>

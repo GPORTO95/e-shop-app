@@ -1,0 +1,39 @@
+:host {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 3rem;
+    flex-grow: 1;
+
+    .list {
+        display: flex;
+        flex-direction: column;
+
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .remove {
+                cursor: pointer;
+                color: white;
+                font-size: 1.5rem;
+                background-color: rgb(124, 6, 6);
+                border-radius: 2rem;
+                border: none;
+                padding: 1.5rem 2rem;
+                transition: opacity .2s ease-in-out;
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}
