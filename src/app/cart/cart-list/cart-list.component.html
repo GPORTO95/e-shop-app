@@ -9,6 +9,11 @@
                 <p>{{ cartItem.product.description }}</p>
             </div>
         </div>
+        <select (change)="onQuantityChange($event, cartItem)" class="quantity">
+            @for (quantity of quantityOptions; track quantity) {
+                <option [value]="quantity" [selected]="cartItem.quantity == quantity">{{ quantity }}</option>
+            }
+        </select>
         <div class="item_price">
             <h5>${{ cartItem.product.price * cartItem.quantity }}</h5>
             <p>${{ cartItem.product.price }} each</p>
